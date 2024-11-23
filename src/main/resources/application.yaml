@@ -1,5 +1,25 @@
-spring.datasource.url: jdbc:h2:file:./camunda-h2-database
+spring:
+  datasource:
+    url: jdbc:h2:file:./camunda-artifact-access;DB_CLOSE_DELAY=-1
+    username: tral909
+    password:
+    driver-class: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      path: /h2
+    jpa:
+      hibernate:
+        ddl-auto: update
+  output:
+    ansi:
+      enabled: ALWAYS
 
-camunda.bpm.admin-user:
-  id: demo
-  password: demo
+camunda:
+  bpm:
+   admin-user:
+     id: demo
+     password: demo
+     first-name: tral909
+     last-name: naval ship
+     email: tral909@mail.ru
